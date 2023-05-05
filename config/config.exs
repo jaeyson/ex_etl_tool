@@ -8,7 +8,10 @@
 import Config
 
 config :ex_etl_tool,
-  ecto_repos: [ExEtlTool.Repo]
+  ecto_repos: [
+    ExEtlTool.MysqlRepo,
+    ExEtlTool.PostgresRepo
+  ]
 
 # Configures the endpoint
 config :ex_etl_tool, ExEtlToolWeb.Endpoint,
