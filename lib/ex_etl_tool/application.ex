@@ -9,7 +9,8 @@ defmodule ExEtlTool.Application do
   def start(_type, _args) do
     children = [
       # Start the Ecto repository
-      ExEtlTool.Repo,
+      # ExEtlTool.MysqlRepo,
+      # ExEtlTool.PostgresRepo,
       # Start the Telemetry supervisor
       ExEtlToolWeb.Telemetry,
       # Start the PubSub system

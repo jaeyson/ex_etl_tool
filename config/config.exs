@@ -7,8 +7,15 @@
 # General application configuration
 import Config
 
-config :ex_etl_tool,
-  ecto_repos: [ExEtlTool.Repo]
+config :myxql, :extra_error_codes, [
+  {404, :ER_NOT_FOUND}
+]
+
+# config :ex_etl_tool,
+#   ecto_repos: [
+#     ExEtlTool.MysqlRepo,
+#     ExEtlTool.PostgresRepo
+#   ]
 
 # Configures the endpoint
 config :ex_etl_tool, ExEtlToolWeb.Endpoint,
